@@ -376,7 +376,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 120vh; /* enough space */
+  height: 100vh; /* enough space */
   padding: 30px;
 }
 
@@ -384,7 +384,7 @@ body {
   position: relative;
   z-index: 1;               /* text stays above background */
   width: 60%;
-  height: 700px;
+  height: 500px;
   padding: 70px;
   display: flex;
   flex-direction: column;
@@ -410,7 +410,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   width: 80%;               /* smaller fixed width */
-  height: 80vh;              /* smaller fixed height */
+  height: 90vh;              /* smaller fixed height */
   
 }
 
@@ -423,7 +423,7 @@ body {
 
 .Discover-container {
   padding: 40px;
-  height: 100vh;
+  height: 140vh;
 }
 .name-grid {
   display: grid;
