@@ -1,0 +1,837 @@
+/* Reset & base */
+body {
+  margin: 0;
+   font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  background: rgba(70,35,35); /* fallback background */
+  overflow-x: auto;
+}
+.header-wrapper {
+  display: flex;
+  align-items: center;   /* vertically center all children */
+  justify-content: center;
+  height: 180px;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgb(70, 35, 35);
+}
+/* Header/Navbar */
+.header-container {
+  position: relative;   /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;       /* full width background */
+  padding-top: 0;
+  z-index: 1000;
+  
+}
+
+/* Title inside header */
+.header-title {
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  margin: 0;                       /* remove default h1 margin */
+  line-height: 1;                  /* keeps text centered */
+}
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  gap: 2rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.nav ul li a {
+  display: flex;         /* makes anchor respect flex alignment */
+  align-items: center;   /* centers the text vertically */
+  line-height: 1;        /* removes extra vertical space from font */
+  padding: 0;            /* no extra top/bottom padding */
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav ul li a:hover {
+  color: #fbcccc;
+  transform: scale(1.1);
+}
+
+/* Home section */
+.home-container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(61, 27, 27, 0.65); /* dark overlay for text visibility */
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Text section */
+.home-text {
+  flex: 1;
+  
+}
+
+.home-text p {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+/* Highlight title */
+.highlight {
+  color: white;
+  font-size: 70px;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-weight: 50;
+ 
+}
+
+/* Sub-highlight text */
+.highlight-text {
+  color: white;
+  font-size: 55px;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  margin: 6px 0;
+}
+
+/* Button */
+.btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-container2{
+  display: flex;
+  align-items: center;
+  text-align: center;      /* align button to the left */
+  margin-top: 50px;      /* space from the text above */
+}
+.shop-btn2 {
+  background-color: white;
+  color: black;
+  border: 2px solid transparent; /* default border */
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 15px 30px;
+  transition: all 0.3s ease; /* smooth hover transition */
+}
+
+.shop-btn2:hover {
+  background-color: black;
+  color: white;
+  border-color: white;       /* border becomes visible */
+  transform: scale(1.05);    /* slightly enlarge on hover */
+}
+
+.shop-btn {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: rgba(97, 39, 39, 0.9);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: white;
+  color: rgba(97, 39, 39, 0.9);
+  font-size: 25px;
+  transform: scale(1.05);
+}
+
+/* Products grid */
+.product-section {
+  color: white;
+  font-size: 50px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.highlighted-word {
+  font-style: italic;     /* slanted */
+  font-weight: 300;       /* lighter weight */
+}
+
+/* Product Section */
+/* Horizontal product scroll */
+.product-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.product-card {
+  flex: 0 0 250px; /* fixed width */
+  height: 350px;   /* fixed height for all cards */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* stack image + text */
+  justify-content: space-between; /* even spacing */
+  align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;       /* force equal height */
+  object-fit: contain; /* keep image aspect ratio */
+  border-radius: 8px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 220px;      /* fixed height for images */
+  overflow: hidden;   /* keeps images inside */
+  border-radius: 8px;
+}
+
+.product-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* keeps proportions */
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* Default main image visible */
+.product-image .main-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Hover image hidden */
+.product-image .hover-img {
+  position: relative;
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Swap on hover */
+.product-card:hover .main-img {
+  opacity: 0;
+}
+
+.product-card:hover .hover-img {
+  position: relative;
+  opacity: 1;
+}
+
+.product-card h1 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(97, 39, 39, 0.9);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(47, 16, 16, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+
+/* Hide ugly scrollbar in modern browsers */
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+.product-container {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.display-container {
+  position: relative; /* ensure children absolute positioning works */
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.display-item {
+  position: relative; /* needed for overlay */
+  width: 700px;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden; /* keep image and gradient inside card */
+}
+
+.display-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 200;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 60px;
+  z-index: 2; /* ensure overlay is above gradient */
+}
+
+.display-item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, black, rgba(0,0,0,0.15));
+  z-index: 1; /* behind text overlay */
+}
+
+.vibrant-container {
+  position: relative; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120vh; /* enough space */
+  padding: 30px;
+}
+
+.vibrant-block-main {
+  position: relative;
+  z-index: 1;               /* text stays above background */
+  width: 60%;
+  height: 700px;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center inside block */
+  gap: 10px;               /* spacing between lines */
+  text-align: left;        /* left-align lines for clean start */
+  background-color: rgb(35, 6, 6);
+}
+
+.vibrant-block-main p,
+.vibrant-block-main h1,
+.vibrant-block-main h2 {
+  margin: 0;
+}
+
+.vibrant-block {
+  position: absolute;         /* place it over the text block */
+  top: 50%;                   /* center vertically */
+  left: 65%;                  /* move slightly right of text */
+  transform: translate(-50%, -50%) scale(0.85); /* shrink and center */
+  z-index: 2;                 /* ensure it overlaps the text block */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  width: 80%;               /* smaller fixed width */
+  height: 80vh;              /* smaller fixed height */
+  
+}
+
+.vibrant-block img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.Discover-container {
+  padding: 40px;
+  height: 100vh;
+}
+.name-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.img-overlay-container {
+  position: relative;
+  width: 80%;
+  height: 450px;
+  overflow: visible; /* allow text to overflow below image */
+  border-radius: 22px;
+}
+
+.img-overlay-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+.text-half-below {
+  display: block;
+  font-size: 70px;
+  font-weight: 500;
+  color: white;
+  transform: translateY(50%); /* moves half below the image */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.img-overlay-container:hover img {
+  transform: scale(1.05);
+}
+
+.vibrant-block-main p {
+  color: white;
+  margin: 0;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+}
+
+.vibrant-block-main h1 {
+  color: white;
+  margin: 0;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* bigger size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  inset: 0;
+  z-index: 1; /* stays behind content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* semi-transparent instead of solid */
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.about-flex {
+  display: flex;
+  align-items: flex-start;   /* push heading and paragraph to the top */
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.main-heading {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: -50px;   /* move heading upwards */
+}
+
+.main-heading h1 {
+  font-size: 60px;     /* bigger size (adjust as needed) */
+  line-height: 1.1;
+}
+
+.side-paragraph {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  line-height: 1.8;
+  max-width: 500px;
+  text-align: justify;
+}
+.about-right {
+  display: flex;
+  flex-direction: column;  /* stacks paragraph and button vertically */
+  align-items: flex-start; /* keep them aligned to left */
+  gap: 20px;              /* spacing between p and button */
+}
+
+.side-paragraph {
+  font-size: 26px;
+  line-height: 1.4;
+  color: #fff; /* adjust if background is dark */
+  max-width: 500px;/* keeps text readable */
+}
+
+.shop-btn3 {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: rgba(97, 39, 39, 0.9);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: underline;   /* ✅ underline text */
+  text-underline-offset: 2px;   /* ✅ pushes underline a little below text */
+}
+
+.shop-btn3:hover {
+  background-color: white;
+  color: rgba(97, 39, 39, 0.9);
+  font-size: 25px;
+  transform: scale(1.05);
+}
+
+.ambassador-container {
+  text-align: center;
+  padding: 80px 20px;
+  background: rgba(97, 39, 39, 0.9);
+}
+
+.ambassador-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  word-spacing: 15px;
+  color: white;
+}
+
+/* Grid container for ambassadors */
+.ambassador-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  overflow: visible; /* <-- ensure animations show */
+  gap: 2rem;                    /* spacing between cards */
+  flex-wrap: wrap;              /* allows wrapping on smaller screens */
+  margin-top: 2rem;
+}
+
+/* Each card */
+.ambassador-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  width: 480px;                 /* fixed width so they align nicely */
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+.ambassador-card[data-aos] {
+  opacity: 0; /* start hidden */
+  will-change: transform, opacity;
+}
+
+.ambassador-card:hover {
+  transform: translateY( 30px);
+  box-shadow: 0 14px 28px rgba(47, 16, 16, 0.9);
+}
+
+.ambassador-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ambassador-card:hover img {
+  transform: scale(1.03);
+}
+
+.footer-container {
+  background: black;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.join-us h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.join-us p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+}
+
+.join-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.join-form input {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+}
+
+.join-btn {
+  padding: 0.8rem 2rem;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.join-btn:hover {
+  background: transparent;
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.copy {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+
+  .highlight-text {
+    font-size: 40px;
+  }
+
+  .highlight {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: row;
+    height: auto;
+    
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .nav ul li a {
+    font-size: 1rem;
+  }
+  .product-container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+  @media (max-width: 768px) {
+  .vibrant-container {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+    margin: 0 auto 50px !important;
+    overflow: hidden !important;   
+    z-index: 1;
+  }
+
+  .vibrant-block {
+    position: relative !important; 
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 20px 0 !important;
+    transform: none !important;
+    z-index: 1;
+  }
+
+  .vibrant-block img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+  }
+
+ 
+  #About {
+    clear: both;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+  }
+  .about-container {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .side-paragraph {
+    max-width: 500px;   
+    font-size: 0.95rem; 
+    line-height: 1.6rem;
+    margin: 0 auto;     
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+ 
+  .about-container {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .side-paragraph {
+    max-width: 500px;  
+    font-size: 0.95rem; 
+    line-height: 1.6rem;
+    margin: 0 auto;    
+    padding: 0 15px;
+    text-align: justify; 
+  }
+  .ambassador-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+  }
+}
