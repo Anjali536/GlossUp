@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+GlossUp 🌸
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive beauty & skincare e-commerce website built with React, Tailwind CSS, and AOS animations.
 
-## Available Scripts
+This project showcases a clean UI with parallax effects, ambassador highlights, and a smooth shopping experience.
 
-In the project directory, you can run:
+✨ Features
 
-### `npm start`
+Hero Section with call-to-action buttons (Shop Now / Join GlossUp).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Discover More parallax section with vibrant visuals (Face & Lips).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Product Grid with responsive design for mobile and desktop.
 
-### `npm test`
+About Section with engaging description and clean layout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ambassadors Section highlighting brand ambassadors with hover effects.
 
-### `npm run build`
+Footer with Join Us form and extra details.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Fully responsive for all screen sizes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Smooth scroll animations (AOS).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🛠️ Tech Stack
 
-### `npm run eject`
+React.js – Frontend library
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tailwind CSS – Styling & responsiveness
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+AOS (Animate On Scroll) – Smooth fade animations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+JavaScript (ES6+) – Interactivity
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+📸 Screenshots
 
-## Learn More
+(Add screenshots of your site here, e.g., homepage, product section, ambassadors.)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🚀 Getting Started
+Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Node.js & npm installed
 
-### Code Splitting
+Installation
+# Clone the repository
+git clone https://github.com/your-username/glossup.git  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Go inside the project
+cd glossup  
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Start development server
+npm start  
 
-### Making a Progressive Web App
+📂 Folder Structure
+/src
+  ├── assets/         # Images & icons
+  ├── components/     # Reusable React components
+  │     ├── Products.jsx
+  │     ├── About.jsx
+  │     ├── Ambassador.jsx
+  │     ├── Footer.jsx
+  ├── App.jsx         # Main app
+  └── index.js        # Entry point
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📬 Contact
 
-### Advanced Configuration
+👩 Author: Anjali Thakur
+🌐 Portfolio: https://anjali-thakur-portfolio-three.vercel.app/
+🐙 GitHub: https://github.com/Anjali536/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⚡ GlossUp – Discover beauty, embrace confidence.
